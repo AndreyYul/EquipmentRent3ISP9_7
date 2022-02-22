@@ -211,6 +211,7 @@ namespace EquipmentRent3ISP9_7.Windows
                     MessageBox.Show(ex.Message.ToString(), "Ошибка!");
                 }
             }
+            // Comment
         }
     }
 }

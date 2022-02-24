@@ -29,7 +29,7 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Код" Width="65" DisplayMemberBinding="{Binding IdSale}"/>
-                    <GridViewColumn Header="Клиент" Width="125" DisplayMemberBinding="{Binding IdClient}"/>
+                    <GridViewColumn Header="Клиент" Width="125" DisplayMemberBinding="{Binding FIO}"/>
                     <GridViewColumn Header="Оборудование" Width="150" DisplayMemberBinding="{Binding Product.ProductName}"/>
                     <GridViewColumn Header="Сотрудник" Width="150" DisplayMemberBinding="{Binding IdEmployee}"/>
                     <GridViewColumn Header="Дата" Width="150" DisplayMemberBinding="{Binding SaleDate}"/>

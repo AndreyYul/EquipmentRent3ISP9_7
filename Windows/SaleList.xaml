@@ -29,9 +29,9 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Код" Width="65" DisplayMemberBinding="{Binding IdSale}"/>
-                    <GridViewColumn Header="Клиент" Width="125" DisplayMemberBinding="{Binding FIO}"/>
+                    <GridViewColumn Header="Клиент" Width="125" DisplayMemberBinding="{Binding Client.FIO}"/>
                     <GridViewColumn Header="Оборудование" Width="150" DisplayMemberBinding="{Binding Product.ProductName}"/>
-                    <GridViewColumn Header="Сотрудник" Width="150" DisplayMemberBinding="{Binding IdEmployee}"/>
+                    <GridViewColumn Header="Сотрудник" Width="150" DisplayMemberBinding="{Binding Employee.FIO}"/>
                     <GridViewColumn Header="Дата" Width="150" DisplayMemberBinding="{Binding SaleDate}"/>
                     <GridViewColumn Header="Телефон" Width="148" DisplayMemberBinding="{Binding ReturnDate}"/>
                 </GridView>

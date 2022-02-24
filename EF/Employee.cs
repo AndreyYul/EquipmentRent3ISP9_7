@@ -30,6 +30,7 @@ namespace EquipmentRent3ISP9_7.EF
         public string Login { get; set; }
         public string Password { get; set; }
         public int IdRole { get; set; }
+        public Nullable<bool> IsDeleted { get; set; }
     
         public virtual Gender Gender { get; set; }
         public virtual Role Role { get; set; }

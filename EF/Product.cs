@@ -27,6 +27,7 @@ namespace EquipmentRent3ISP9_7.EF
         public int IdManufacturer { get; set; }
         public System.DateTime Warranty { get; set; }
         public decimal Price { get; set; }
+        public Nullable<bool> IsDeleted { get; set; }
     
         public virtual Manufacturer Manufacturer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

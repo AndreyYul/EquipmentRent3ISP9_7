@@ -87,7 +87,10 @@ namespace EquipmentRent3ISP9_7.Windows
                     if (LV_Employee.SelectedItem is Employee)
                     {
                         var employee = LV_Employee.SelectedItem as Employee;
-                        HelperCl.Context.Employee.Remove(employee);
+
+                        Employee deletedEmployee = employee;
+                        deletedEmployee.IsDeleted = true;
+
                         HelperCl.Context.SaveChanges();
                         Filter(0);
                         MessageBox.Show("Пользователь успешно удалён", "Готово", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -116,7 +119,7 @@ namespace EquipmentRent3ISP9_7.Windows
         {
             // Код, выполняющийся обязательно
             List<Employee> listEmployee = HelperCl.Context.Employee.ToList();
-
+            //Where(i => i.IdEmployee.Equals(true)) 
             switch (chooseItem)
             {
                 default:

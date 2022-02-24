@@ -56,7 +56,7 @@
                   MouseDoubleClick="LV_Employee_MouseDoubleClick">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Код" Width="70" DisplayMemberBinding="{Binding IdEmployee}"/>
+                    <GridViewColumn Header="Код" Width="70" DisplayMemberBinding="{Binding IsDeleted}"/>
                     <GridViewColumn Header="Фамилия" Width="100" DisplayMemberBinding="{Binding LastName}"/>
                     <GridViewColumn Header="Имя" Width="100" DisplayMemberBinding="{Binding FirstName}"/>
                     <GridViewColumn Header="Отчество" Width="100" DisplayMemberBinding="{Binding MiddleName}"/>

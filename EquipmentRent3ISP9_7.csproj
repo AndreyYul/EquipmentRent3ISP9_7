@@ -99,6 +99,7 @@
     <Compile Include="EF\Passport.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\PassportPartial.cs" />
     <Compile Include="EF\Product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

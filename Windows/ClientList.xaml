@@ -61,7 +61,7 @@
                     <GridViewColumn Header="Пол" Width="75" DisplayMemberBinding="{Binding Gender.GenderName}"/>
                     <GridViewColumn Header="Email" Width="175" DisplayMemberBinding="{Binding Email}"/>
                     <GridViewColumn Header="Телефон" Width="120" DisplayMemberBinding="{Binding Phone}"/>
-                    <GridViewColumn Header="Паспорт" Width="75" DisplayMemberBinding="{Binding IdPassport}"/>
+                    <GridViewColumn Header="Паспорт" Width="75" DisplayMemberBinding="{Binding Passport.FullPassport}"/>
                 </GridView>
             </ListView.View>
         </ListView>

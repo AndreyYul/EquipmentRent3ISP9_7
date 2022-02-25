@@ -118,7 +118,7 @@ namespace EquipmentRent3ISP9_7.Windows
         private void Filter(int chooseItem)
         {
             // Код, выполняющийся обязательно
-            List<Employee> listEmployee = HelperCl.Context.Employee.ToList();
+            List<Employee> listEmployee = HelperCl.Context.Employee.Where(i => i.IsDeleted == false).ToList();
             //Where(i => i.IdEmployee.Equals(true)) 
             switch (chooseItem)
             {

@@ -20,6 +20,7 @@ namespace EquipmentRent3ISP9_7.EF
         public int IdEmployee { get; set; }
         public System.DateTime SaleDate { get; set; }
         public Nullable<System.DateTime> ReturnDate { get; set; }
+        public bool IsDeleted { get; set; }
     
         public virtual Client Client { get; set; }
         public virtual Employee Employee { get; set; }

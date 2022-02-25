@@ -87,7 +87,7 @@ namespace EquipmentRent3ISP9_7.Windows
                     if (LV_Employee.SelectedItem is Employee)
                     {
                         var employee = LV_Employee.SelectedItem as Employee;
-                        
+                        employee.IsDeleted = true;
                         HelperCl.Context.SaveChanges();
                         Filter(0);
                         MessageBox.Show("Пользователь успешно удалён", "Готово", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -115,7 +115,7 @@ namespace EquipmentRent3ISP9_7.Windows
         private void Filter(int chooseItem)
         {
             // Код, выполняющийся обязательно
-            List<Employee> listEmployee = HelperCl.Context.Employee.Where(i =>  ).ToList();
+            List<Employee> listEmployee = HelperCl.Context.Employee.Where(i => i.IsDeleted == false).ToList();
 
             switch (chooseItem)
             {

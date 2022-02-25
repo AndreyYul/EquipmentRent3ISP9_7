@@ -1,6 +1,6 @@
 <h1>Отчёт за 25 февраля</h1>
 <h2>Выполнили:<br><b>Головин А.Д.<br>Юлин А.А.</b></h2>
 <h3>Фото окна авторизации</h3>
-![изображение](https://user-images.githubusercontent.com/81095386/155760996-42b523bc-f4a2-44f2-a34b-9f0f6fd225e0.png)
+<img src="https://user-images.githubusercontent.com/81095386/155761219-164c0365-0821-41bb-9126-c5970b6354f5.png">
 <br>
 

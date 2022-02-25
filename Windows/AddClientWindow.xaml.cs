@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EquipmentRent3ISP9_7.EF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,44 @@ namespace EquipmentRent3ISP9_7.Windows
     /// </summary>
     public partial class AddClientWindow : Window
     {
+        bool isEdit;
+        Client editEmployee = new Client();
+
         public AddClientWindow()
         {
             InitializeComponent();
+            cmbGender.ItemsSource = HelperClass.HelperCl.Context.Gender.ToList();
+            cmbGender.DisplayMemberPath = "GenderName";
+            cmbGender.SelectedIndex = 0;
+        }
+
+        public AddClientWindow(Client client)
+        {
+            InitializeComponent();
+
+            // Заполнение полей свойствами аргумента employee 
+            cmbGender.ItemsSource = HelperClass.HelperCl.Context.Gender.ToList();
+            cmbGender.DisplayMemberPath = "GenderName";
+
+            cmbRole.ItemsSource = HelperClass.HelperCl.Context.Role.ToList();
+            cmbRole.DisplayMemberPath = "RoleName";
+
+            txtLname.Text = client.LastName;
+            txtFname.Text = client.FirstName;
+            txtMname.Text = client.MiddleName;
+            txtEmail.Text = client.Email;
+            txtPhone.Text = client.Phone;
+
+            txtPassport.Text = client.Passport;
+
+            cmbGender.SelectedIndex = client.IdGender - 1;
+
+            tbTitle.Text = "Изменение данных клиента";
+            btnAddNew.Content = "Сохранить";
+
+            isEdit = true;
+            // Сохраняем employee для доступа вне конструктора
+            editClient = client;
         }
     }
 }

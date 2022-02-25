@@ -26,8 +26,6 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
@@ -79,25 +77,13 @@
                    Margin="0,0,20,0"
                    FontSize="16"/>
         <TextBlock Grid.Row="7"
-                   Text="Логин"
+                   Text="Дата рождения"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Right"
                    Margin="0,0,20,0"
                    FontSize="16"/>
         <TextBlock Grid.Row="8"
-                   Text="Пароль"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Right"
-                   Margin="0,0,20,0"
-                   FontSize="16"/>
-        <TextBlock Grid.Row="9"
-                   Text="Повтор пароля"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Right"
-                   Margin="0,0,20,0"
-                   FontSize="16"/>
-        <TextBlock Grid.Row="10"
-                   Text="Роль"
+                   Text="Паспорт"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Right"
                    Margin="0,0,20,0"
@@ -157,16 +143,15 @@
                  VerticalContentAlignment="Center"
                  FontSize="16"
                  MaxLength="12"/>
-        <TextBox x:Name="txtLogin"
+        <DatePicker x:Name="dpBirthday"
                  Width="240"
                  Grid.Column="1"
                  Grid.Row="7"
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  VerticalContentAlignment="Center"
-                 FontSize="16"
-                 MaxLength="50"/>
-        <PasswordBox x:Name="txtPassword"
+                 FontSize="16"/>
+        <TextBox x:Name="txtPassport"
                  Width="240"
                  Grid.Column="1"
                  Grid.Row="8"
@@ -175,25 +160,8 @@
                  VerticalContentAlignment="Center"
                  FontSize="16"
                  MaxLength="50"/>
-        <PasswordBox x:Name="txtPasswordRepeat"
-                 Width="240"
-                 Grid.Column="1"
-                 Grid.Row="9"
-                 VerticalAlignment="Center"
-                 HorizontalAlignment="Center"
-                 VerticalContentAlignment="Center"
-                 FontSize="16"
-                 MaxLength="50"/>
-        <ComboBox x:Name="cmbRole"
-                 Width="240"
-                 Grid.Column="1"
-                 Grid.Row="10"
-                 VerticalAlignment="Center"
-                 HorizontalAlignment="Center"
-                 VerticalContentAlignment="Center"
-                 FontSize="16"/>
         <Button x:Name="btnAddNew"
-                Grid.Row="11"
+                Grid.Row="9"
                 Grid.ColumnSpan="2"
                 Width="120"
                 Height="30"

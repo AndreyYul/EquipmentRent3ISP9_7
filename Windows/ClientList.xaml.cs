@@ -85,8 +85,8 @@ namespace EquipmentRent3ISP9_7.Windows
                 {
                     if (LV_Client.SelectedItem is Employee)
                     {
-                        var employee = LV_Client.SelectedItem as Employee;
-                        
+                        var client = LV_Client.SelectedItem as Employee;
+                        client.IsDeleted = true;
                         HelperCl.Context.SaveChanges();
                         Filter(0);
                         MessageBox.Show("Пользователь успешно удалён", "Готово", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -100,13 +100,13 @@ namespace EquipmentRent3ISP9_7.Windows
         }
 
         // Изменение пользователя
-        private void LV_Employee_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void LV_Client_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (LV_Client.SelectedItem is Employee)
             {
-                Employee empl = LV_Client.SelectedItem as Employee;
-                AddEmployeeWindow editEmployee = new AddEmployeeWindow(empl);
-                editEmployee.ShowDialog();
+                Client client = LV_Client.SelectedItem as Client;
+                AddClientWindow editClient = new AddClientWindow(client);
+                editClient.ShowDialog();
                 Filter(0);
             }
         }

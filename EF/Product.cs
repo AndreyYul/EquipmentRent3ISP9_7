@@ -23,7 +23,6 @@ namespace EquipmentRent3ISP9_7.EF
     
         public int IdProduct { get; set; }
         public string ProductName { get; set; }
-        public bool IsActive { get; set; }
         public int IdManufacturer { get; set; }
         public System.DateTime Warranty { get; set; }
         public decimal Price { get; set; }

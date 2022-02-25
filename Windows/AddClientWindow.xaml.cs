@@ -21,7 +21,7 @@ namespace EquipmentRent3ISP9_7.Windows
     public partial class AddClientWindow : Window
     {
         bool isEdit;
-        Client editEmployee = new Client();
+        Client editClient = new Client();
 
         public AddClientWindow()
         {
@@ -39,16 +39,14 @@ namespace EquipmentRent3ISP9_7.Windows
             cmbGender.ItemsSource = HelperClass.HelperCl.Context.Gender.ToList();
             cmbGender.DisplayMemberPath = "GenderName";
 
-            cmbRole.ItemsSource = HelperClass.HelperCl.Context.Role.ToList();
-            cmbRole.DisplayMemberPath = "RoleName";
 
             txtLname.Text = client.LastName;
             txtFname.Text = client.FirstName;
             txtMname.Text = client.MiddleName;
             txtEmail.Text = client.Email;
             txtPhone.Text = client.Phone;
-
-            txtPassport.Text = client.Passport;
+            dpBirthday.SelectedDate = client.Birthday;
+            txtPassport.Text = client.IdPassport.ToString();
 
             cmbGender.SelectedIndex = client.IdGender - 1;
 
